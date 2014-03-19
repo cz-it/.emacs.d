@@ -9,3 +9,14 @@
 (require 'auto-complete-config)
 (require 'go-mode-load)
 ;; (load "go-mode-load")
+
+;; coding style
+
+;; indent and tab
+ ;; set TAB to be 4 with
+ (setq default-tab-width 4) 
+ (setq c-default-style "linux"
+ 	  c-basic-offset 4)
+
+ ;; set python indent
+ (setq python-indent-offset 4);;  indent after enter
