@@ -2,6 +2,14 @@
 (add-to-list 'load-path "~/.emacs.d/lib/auto-complete")
 (load "auto-complete-load")
 
+
+;; markdown for emacs
+(add-to-list 'load-path "~/.emacs.d/lib/markdown")
+(autoload 'markdown-mode "markdown-mode"  
+	  "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
 ;; golang for emacs 
 (add-to-list 'load-path "~/.emacs.d/lib/golang")
 (require 'go-autocomplete)
