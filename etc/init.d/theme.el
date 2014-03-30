@@ -2,4 +2,4 @@
 (add-to-list 'load-path "~/.emacs.d/lib/themes/color-theme")
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-vim-colors)
+(color-theme-dark-laptop)
