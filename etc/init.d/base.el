@@ -12,3 +12,6 @@
   (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
   ;; close animation
   (setq inhibit-startup-message t)
+
+;; set no backup file
+  (setq make-backup-files t)
