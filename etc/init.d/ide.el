@@ -31,3 +31,11 @@
 
  ;; set python indent
  (setq python-indent-offset 4);;  indent after enter
+
+
+;; lua for emacs 
+(add-to-list 'load-path "~/.emacs.d/lib/lua")
+(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+
