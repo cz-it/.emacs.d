@@ -13,5 +13,13 @@
   ;; close animation
   (setq inhibit-startup-message t)
 
+;; set backup action
+  ;; set backup file position
+  (setq backup-directory-alist '(("." . "~/backups")))
+  ;; set backup method
+  (setq backup-by-copying t)
+
 ;; set no backup file
   (setq make-backup-files t)
+
+
