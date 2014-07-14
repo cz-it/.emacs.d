@@ -22,4 +22,9 @@
 ;; set no backup file
   (setq make-backup-files t)
 
+;; line width
+  ;; 80 charactor one line
+  (setq default-fill-column 80)
+  (auto-fill-mode 1) 
+
 
