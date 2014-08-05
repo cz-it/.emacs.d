@@ -2,4 +2,5 @@
 (load "ide.el")
 (load "theme.el")
 (load "base.el")
+(load "shortcuts.el")
 

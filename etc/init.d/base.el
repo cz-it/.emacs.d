@@ -1,6 +1,6 @@
 
 ;; show line num for emacs23 and higher
-(global-linum-mode 1) 
+(global-linum-mode t) 
 (setq linum-format "%4d| ")
 
 ;; window setting
@@ -26,5 +26,4 @@
   ;; 80 charactor one line
   (setq default-fill-column 80)
   (auto-fill-mode 1) 
-
 

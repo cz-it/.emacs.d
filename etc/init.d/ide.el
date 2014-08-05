@@ -43,4 +43,4 @@
 (add-to-list 'load-path "~/.emacs.d/lib/sr-speedbar")
 (require 'sr-speedbar)
 (add-hook 'after-init-hook '(lambda () (sr-speedbar-toggle)))
-(setq sr-speedbar-right-side nil)
+;;(setq sr-speedbar-right-side nil)
