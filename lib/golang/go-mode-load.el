@@ -64,6 +64,12 @@ recommended to look at goflymake
 
 (add-to-list 'auto-mode-alist (cons "\\.go\\'" 'go-mode))
 
+;; add for golint
+(add-to-list 'load-path (concat (getenv "GOPATH")  "/src/github.com/golang/lint/misc/emacs"))
+(require 'golint)
+;; end
+
+
 (autoload 'gofmt-before-save "go-mode" "\
 Add this to .emacs to run gofmt on the current buffer when saving:
  (add-hook 'before-save-hook 'gofmt-before-save).
