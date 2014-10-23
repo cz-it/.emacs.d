@@ -44,3 +44,6 @@
 (require 'sr-speedbar)
 (add-hook 'after-init-hook '(lambda () (sr-speedbar-toggle)))
 ;;(setq sr-speedbar-right-side nil)
+;;(setq imenu-auto-scan t)
+(setq imenu-auto-scan t)
+(setq speedbar-show-unknown-files t) 

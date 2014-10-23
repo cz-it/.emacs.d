@@ -9,8 +9,8 @@
 
 
 ; open and close dir-tree sr-speedbar
-(global-set-key (kbd "<f12>")  'sr-speedbar-close)
-(global-set-key (kbd "<f11>")  'sr-speedbar-open)
+(global-set-key (kbd "<f12>")  'sr-speedbar-toggle)
+(global-set-key (kbd "<f11>")  'speedbar-refresh)
 
 ; change windows size
 
