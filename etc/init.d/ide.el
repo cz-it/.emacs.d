@@ -2,6 +2,20 @@
 (add-to-list 'load-path "~/.emacs.d/lib/auto-complete")
 (load "auto-complete-load")
 
+;; cedet
+(add-to-list 'load-path "~/.emacs.d/lib/cedet/cedet-1.1/")
+(load-file "~/.emacs.d/lib/cedet/cedet-1.1/common/cedet.el")
+(global-ede-mode 1)
+(semantic-load-enable-code-helpers) 
+(global-srecode-minor-mode 1)
+
+;; ecb
+(add-to-list 'load-path "~/.emacs.d/lib/cedet/ecb-2.40")
+(load-file "~/.emacs.d/lib/cedet/ecb-2.40/ecb.el")
+(require 'ecb)
+(require 'ecb-autoloads)
+
+
 
 ;; markdown for emacs
 (add-to-list 'load-path "~/.emacs.d/lib/markdown")
