@@ -8,6 +8,13 @@
 (global-ede-mode 1)
 (semantic-load-enable-code-helpers) 
 (global-srecode-minor-mode 1)
+(semantic-load-enable-minimum-features)
+(semantic-load-enable-code-helpers)
+(semantic-load-enable-guady-code-helpers)
+(semantic-load-enable-excessive-code-helpers)
+(semantic-load-enable-semantic-debugging-helpers)
+;; .cpp to .h
+(require 'eassist nil 'noerror)
 
 ;; ecb
 (add-to-list 'load-path "~/.emacs.d/lib/cedet/ecb-2.40")
@@ -35,6 +42,11 @@
 (add-to-list 'load-path "~/.emacs.d/lib/cscope")
 (require 'ascope)
 
+;; protobuf for emacs
+(add-to-list 'load-path "~/.emacs.d/lib/protobuf")
+(require 'protobuf-mode)
+(setq auto-mode-alist  (cons '(".proto$" . protobuf-mode) auto-mode-alist))
+
 ;; coding style
 
 ;; indent and tab
@@ -61,3 +73,5 @@
 ;;(setq imenu-auto-scan t)
 (setq imenu-auto-scan t)
 (setq speedbar-show-unknown-files t) 
+
+

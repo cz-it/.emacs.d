@@ -27,3 +27,5 @@
   (setq default-fill-column 80)
   (auto-fill-mode 1) 
 
+;; share clipboard
+(setq x-select-enable-clipboard t);
