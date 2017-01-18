@@ -33,11 +33,11 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 ;; golang for emacs 
-(add-to-list 'load-path "~/.emacs.d/lib/golang")
-(require 'go-autocomplete)
-(require 'auto-complete-config)
-(require 'go-mode-load)
-;; (load "go-mode-load")
+;;(add-to-list 'load-path "~/.emacs.d/lib/golang")
+;;(require 'go-autocomplete)
+;;(require 'auto-complete-config)
+;;(require 'go-mode-load)
+;;(load "go-mode-load")
 
 ;; cscope
 (add-to-list 'load-path "~/.emacs.d/lib/cscope")
