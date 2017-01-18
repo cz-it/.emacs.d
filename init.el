@@ -42,15 +42,11 @@
 
 (when window-system (set-exec-path-from-shell-PATH))
 
-(setenv "GOPATH" "/Users/apollo/go_proj")
-(add-to-list 'exec-path "/Users/apollo/go_proj/bin")
+(setenv "GOPATH" "/Users/cz/Proj/golang")
+(add-to-list 'exec-path "/Users/cz/Proj/golang/bin")
 (add-hook 'before-save-hook 'gofmt-before-save)
 
 ;;; auto complete
-(defun auto-complete-for-go ()
-  (auto-complete-mode 1))
-(add-hook 'go-mode-hook 'auto-complete-for-go)
-
 (defun auto-complete-for-go ()
   (auto-complete-mode 1))
 (add-hook 'go-mode-hook 'auto-complete-for-go)

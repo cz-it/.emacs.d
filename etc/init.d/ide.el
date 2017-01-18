@@ -1,6 +1,7 @@
-;; auto comlete
-(add-to-list 'load-path "~/.emacs.d/lib/auto-complete")
-(load "auto-complete-load")
+;; auto comlete 
+;(add-to-list 'load-path "~/.emacs.d/lib/auto-complete")
+;(load "auto-complete-load")
+; already in melpa
 
 ;; cedet
 ;(add-to-list 'load-path "~/.emacs.d/lib/cedet/cedet-1.1/")
