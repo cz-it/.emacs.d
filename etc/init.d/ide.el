@@ -3,24 +3,25 @@
 (load "auto-complete-load")
 
 ;; cedet
-(add-to-list 'load-path "~/.emacs.d/lib/cedet/cedet-1.1/")
-(load-file "~/.emacs.d/lib/cedet/cedet-1.1/common/cedet.el")
-(global-ede-mode 1)
-(semantic-load-enable-code-helpers) 
-(global-srecode-minor-mode 1)
-(semantic-load-enable-minimum-features)
-(semantic-load-enable-code-helpers)
-(semantic-load-enable-guady-code-helpers)
-(semantic-load-enable-excessive-code-helpers)
-(semantic-load-enable-semantic-debugging-helpers)
+;(add-to-list 'load-path "~/.emacs.d/lib/cedet/cedet-1.1/")
+;(load-file "~/.emacs.d/lib/cedet/cedet-1.1/common/cedet.el")
+;(global-ede-mode 1)
+;(semantic-load-enable-code-helpers) 
+;(global-srecode-minor-mode 1)
+;(semantic-load-enable-minimum-features)
+;(semantic-load-enable-code-helpers)
+;(semantic-load-enable-guady-code-helpers)
+;(semantic-load-enable-excessive-code-helpers)
+;(semantic-load-enable-semantic-debugging-helpers)
+
 ;; .cpp to .h
 (require 'eassist nil 'noerror)
 
 ;; ecb
-(add-to-list 'load-path "~/.emacs.d/lib/cedet/ecb-2.40")
-(load-file "~/.emacs.d/lib/cedet/ecb-2.40/ecb.el")
-(require 'ecb)
-(require 'ecb-autoloads)
+;(add-to-list 'load-path "~/.emacs.d/lib/cedet/ecb-2.40")
+;(load-file "~/.emacs.d/lib/cedet/ecb-2.40/ecb.el")
+;(require 'ecb)
+;(require 'ecb-autoloads)
 
 
 
@@ -72,6 +73,12 @@
 ;;(setq sr-speedbar-right-side nil)
 ;;(setq imenu-auto-scan t)
 (setq imenu-auto-scan t)
-(setq speedbar-show-unknown-files t) 
+(setq sr-speedbar-refresh-turn-on t)
+(setq speedbar-show-unknown-files t)
+
+;; template files
+(add-to-list 'load-path "~/.emacs.d/lib/template/template-3.3b")  
+(require 'template)  
+(template-initialize)  
 
 
