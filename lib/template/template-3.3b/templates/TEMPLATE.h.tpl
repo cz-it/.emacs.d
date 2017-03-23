@@ -1,10 +1,12 @@
-/* @(#)TEMPLATE.h.tpl
- */
+/**
+* @(#)TEMPLATE.h.tpl
+* Author: CZ(changzeng@tencent.com) 
+* */
 
-#ifndef _(>>>FILE_UPCASE<<<)_H
-#define _(>>>FILE_UPCASE<<<)_H 1
+#ifndef (>>>FILE_UPCASE<<<)_H_
+#define (>>>FILE_UPCASE<<<)_H_ 1
 
 (>>>POINT<<<)
 
-#endif /* _(>>>FILE_UPCASE<<<)_H */
+#endif /* (>>>FILE_UPCASE<<<)_H_ */
 
