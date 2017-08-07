@@ -1,19 +1,60 @@
 ;; auto comlete 
-;(add-to-list 'load-path "~/.emacs.d/lib/auto-complete")
+;(add-to-list 'load-path "~/.emacs.d//elpa/auto-complete-20161028.643")
 ;(load "auto-complete-load")
 ; already in melpa
+(require 'auto-complete-config)
+(global-auto-complete-mode t)
 
 ;; cedet
-;(add-to-list 'load-path "~/.emacs.d/lib/cedet/cedet-1.1/")
-;(load-file "~/.emacs.d/lib/cedet/cedet-1.1/common/cedet.el")
-;(global-ede-mode 1)
-;(semantic-load-enable-code-helpers) 
-;(global-srecode-minor-mode 1)
-;(semantic-load-enable-minimum-features)
-;(semantic-load-enable-code-helpers)
-;(semantic-load-enable-guady-code-helpers)
-;(semantic-load-enable-excessive-code-helpers)
-;(semantic-load-enable-semantic-debugging-helpers)
+(require 'cedet)
+(global-ede-mode t)
+(custom-set-variables
+ '(semantic-default-submodes (quote (global-semantic-decoration-mode global-semantic-idle-completions-mode
+                                     global-semantic-idle-scheduler-mode global-semanticdb-minor-mode
+                                     global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode)))
+ '(semantic-idle-scheduler-idle-time 3))
+
+(semantic-mode)
+
+(require 'semantic/ia)
+(setq-mode-local c-mode semanticdb-find-default-throttle
+                 '(project unloaded system recursive))
+(setq-mode-local c++-mode semanticdb-find-default-throttle
+                 '(project unloaded system recursive))
+
+(require 'semantic/bovine/gcc)
+(require 'semantic/bovine/c)
+
+(defconst cedet-user-include-dirs
+  (list ".." "../include" "../inc" "../common" "../public" "."
+        "../.." "../../include" "../../inc" "../../common" "../../public"
+        "../../third_part/TSF4G_BASE-2.7.17.141496_X86_64_Release/release/x86_64/include"))
+
+(setq cedet-sys-include-dirs (list
+                              "/usr/include"
+                              "/usr/include/bits"
+                              "/usr/include/glib-2.0"
+                              "/usr/include/gnu"
+                              "/usr/include/gtk-2.0"
+                              "/usr/include/gtk-2.0/gdk-pixbuf"
+                              "/usr/include/gtk-2.0/gtk"
+                              "/usr/local/include"
+                              "/usr/local/include"))
+
+(let ((include-dirs cedet-user-include-dirs))
+  (setq include-dirs (append include-dirs cedet-sys-include-dirs))
+  (mapc (lambda (dir)
+          (semantic-add-system-include dir 'c++-mode)
+          (semantic-add-system-include dir 'c-mode))
+        include-dirs))
+
+(setq semantic-c-dependency-system-include-path "/usr/include/")
+(setq semanticdb-default-save-directory
+      (expand-file-name "~/.emacs.d/semanticdb"))
+(require 'semantic/db-global)
+(semanticdb-enable-gnu-global-databases 'c-mode)
+(semanticdb-enable-gnu-global-databases 'c++-mode)
+
 
 ;; .cpp to .h
 (require 'eassist nil 'noerror)
